@@ -21,10 +21,10 @@ def generateMatrix(confusion, order):
         latex += 'C'
     latex += '}\n'
     for k in estKeys:
-        latex += '& %s ' % (k[:-1].lower() if k[-1] == 'm' else k)
+        latex += '& %s ' % k
     latex += '\\\\\n\\hline\n'
     for k in truKeys:
-        latex += '%s ' % (k[:-1].lower() if k[-1] == 'm' else k)
+        latex += '%s ' % k
         for e in estKeys:
             n = len(confusion[k][e]) if k in confusion and e in confusion[k] else 0
             if Key(strRep = k).major:
